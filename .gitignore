@@ -90,4 +90,3 @@ sw.*
 *.swp
 
 .nuxt-storybook
-storybook-static
