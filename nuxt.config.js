@@ -169,6 +169,19 @@ export default {
           lastCommit: process.env.LAST_COMMIT || ''
         })
       })
-    ]
+    ],
+    babel: {
+      presets({ envName }) {
+        return [
+          [
+            '@nuxt/babel-preset-app',
+            {
+              corejs: { version: 3 }
+            }
+          ]
+        ]
+      },
+      ignore: [/[\/\\]core-js/, /@babel[\/\\]runtime/],
+    },
   }
 };
